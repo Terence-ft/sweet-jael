@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sweet Jael | Freshly Baked Pastries in Port Harcourt GRA</title>
+  <meta name="description" content="Sweet Jael bakes cakes, cupcakes, doughnuts, pies, chin chin, and cold drinks in Port Harcourt GRA. Order for delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Navigation bar -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="logo" href="#home">
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <ellipse cx="24" cy="34" rx="16" ry="8" fill="#5c3a2e"/>
+          <ellipse cx="24" cy="28" rx="14" ry="7" fill="#f3c1ce"/>
+          <ellipse cx="24" cy="23" rx="12" ry="6" fill="#fff6ee"/>
+          <circle cx="24" cy="14" r="3.2" fill="#9a3d56"/>
+        </svg>
+        <span>Sweet Jael</span>
+      </a>
+
+      <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#order">Order Now</a>
+        <button class="cart-button" type="button" id="open-cart" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M6 6 5 3H2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="9" cy="20" r="1.4" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+          </svg>
+          <span class="vh">Shopping cart, </span>
+          <span id="cart-count">0</span>
+          <span class="vh"> items</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Homepage hero -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="kicker">Port Harcourt GRA bakery</p>
+        <h1>Freshly Baked, Made With Love.</h1>
+        <p>Sweet Jael is a small Port Harcourt GRA bakery for cakes, pies, chin chin, and cold drinks that still taste like they just left the kitchen.</p>
+        <a class="btn btn-light" href="#menu">Explore Our Menu</a>
+      </div>
+    </section>
+
+    <!-- Product catalogue. The cards are built by script.js. -->
+    <section class="section" id="menu">
+      <div class="wrap">
+        <p class="kicker">The counter</p>
+        <h2>Our Menu</h2>
+        <p class="intro">Cakes, snacks, and refreshments, priced in Nigerian Naira. Choose a category, then add what you want. The cart updates straight away.</p>
+
+        <div class="filters" role="group" aria-label="Product categories">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="cakes" aria-pressed="false">Cakes</button>
+          <button type="button" class="filter" data-filter="cupcakes" aria-pressed="false">Cupcakes</button>
+          <button type="button" class="filter" data-filter="doughnuts" aria-pressed="false">Doughnuts</button>
+          <button type="button" class="filter" data-filter="meat-pies" aria-pressed="false">Meat Pies</button>
+          <button type="button" class="filter" data-filter="chicken-pies" aria-pressed="false">Chicken Pies</button>
+          <button type="button" class="filter" data-filter="sausage-rolls" aria-pressed="false">Sausage Rolls</button>
+          <button type="button" class="filter" data-filter="chin-chin" aria-pressed="false">Chin Chin</button>
+          <button type="button" class="filter" data-filter="cookies" aria-pressed="false">Cookies</button>
+          <button type="button" class="filter" data-filter="fruit-juices" aria-pressed="false">Fruit Juices</button>
+          <button type="button" class="filter" data-filter="milkshakes" aria-pressed="false">Milkshakes</button>
+          <button type="button" class="filter" data-filter="smoothies" aria-pressed="false">Smoothies</button>
+        </div>
+
+        <noscript>
+          <p class="intro">Turn on JavaScript to see the menu and use the cart.</p>
+        </noscript>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <!-- About Sweet Jael -->
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <p class="kicker">About us</p>
+          <h2>About Sweet Jael</h2>
+          <p>Sweet Jael started in a home kitchen and grew into a counter people cross Port Harcourt for. We bake in small batches, fry chin chin the morning it is sold, and blend juices from fruit we would eat ourselves.</p>
+          <p>The butter is cold, the pepper is not shy, and nothing sits under a lamp all day. Order a box for the house, or pick it up from Port Harcourt GRA.</p>
+          <p>Tuesday to Sunday, 7:00 to 20:00. Closed on Mondays.</p>
+        </div>
+        <img src="images/about.jpg" alt="Fresh croissants on the Sweet Jael counter" width="900" height="1100">
+      </div>
+    </section>
+
+    <!-- Checkout. The summary on the right updates as the cart changes. -->
+    <section class="section" id="order">
+      <div class="wrap">
+        <p class="kicker">Checkout</p>
+        <h2>Order Now</h2>
+        <p class="intro">Check the summary, then tell us where to bring it. We will call to confirm before the rider leaves.</p>
+
+        <div id="order-success" class="success" hidden></div>
+
+        <div class="order-layout" id="order-layout">
+          <form id="order-form" novalidate>
+            <p id="form-error" class="field-error" role="alert" hidden></p>
+
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input id="full-name" name="name" autocomplete="name" required>
+              <p id="error-name" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="0803 000 0000" required>
+              <p id="error-phone" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="address">Delivery address</label>
+              <textarea id="address" name="street-address" autocomplete="street-address" required></textarea>
+              <p id="error-address" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="payment">Preferred payment method</label>
+              <select id="payment" name="payment" required>
+                <option value="">Choose a method</option>
+                <option>Pay on delivery</option>
+                <option>Bank transfer</option>
+                <option>Debit card</option>
+              </select>
+              <p id="error-payment" class="field-error" hidden></p>
+            </div>
+
+            <button class="btn btn-brown" type="submit">Submit Order</button>
+          </form>
+
+          <aside class="summary" aria-live="polite">
+            <h3>Order summary</h3>
+            <div id="summary-lines"></div>
+            <p class="summary-total">Total <strong id="summary-total">₦0</strong></p>
+            <p class="hint" id="summary-pay">Payment will show here once you choose a method.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Sweet Jael</p>
+        <p>Fresh cakes, Nigerian snacks, and cold drinks, baked and blended in Port Harcourt GRA.</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>Port Harcourt GRA</p>
+        <p><a href="tel:+2348163330295">+2348163330295</a></p>
+        <p><a href="mailto:hello@sweetjael.ng">hello@sweetjael.ng</a></p>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <ul class="social">
+          <li><a href="https://instagram.com/sweetjael" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://facebook.com/sweetjael" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://wa.me/2348163330295" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Sweet Jael. All rights reserved. Bakery photos from Unsplash and Wikimedia Commons.</p>
+  </footer>
+
+  <!-- Shopping cart drawer -->
+  <div id="cart-overlay" class="cart-overlay" hidden>
+    <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+      <div class="cart-head">
+        <h2 id="cart-title">Your cart</h2>
+        <button type="button" class="text-btn" id="close-cart">Close</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-foot">
+        <p class="summary-total">Total <strong id="cart-total">₦0</strong></p>
+        <a class="btn btn-brown" href="#order" id="go-checkout">Order now</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
